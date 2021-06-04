@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.collapsebtn {
+    display: none;
+}
+
+nav {
+    background-color: rgb(49, 58, 66);
+    color: rgb(228, 230, 235);
+    width: 100vw;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.brandlogo {
+    border-radius: 50%;
+    height: 40px;
+    margin: 0px 10px 0px 30px;
+}
+
+a {
+    color: rgb(228, 230, 235);
+    text-decoration: none;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.mx-5 {
+    margin: 10px;
+}
+
+.searchinput {
+    margin: 15px 5px;
+    font-size: 15px;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+}
+
+.btn {
+    height: 50%;
+    align-self: center;
+    background-color: #24a0ed;
+    height: 35px;
+    width: 75px;
+    border: none;
+    border-radius: 5px;
+}
+
+.userloginarea {
+    margin-left: 20px;
+}
+
+@media screen and (max-width: 1000px) {
+    .navitems {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .collapsebtn {
+        background-color: rgb(49, 58, 66);
+        border: none;
+        display: inline-block;
+        width: fit-content;
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        cursor: pointer;
+    }
+    .leftcontent {
+        flex-direction: row-reverse;
+        flex-direction: column;
+    }
+    .rightcontent {
+        flex-direction: column;
+    }
+    .userloginarea {
+        align-self: center;
+    }
+    #collapseoff {
+        height: 50px;
+        animation: collapseoff 0.5s;
+        overflow: hidden;
+    }
+    #collapseon {
+        animation: collapseon 0.5s;
+    }
+    @keyframes collapseon {
+        0% {
+            height: 50px;
+            overflow: hidden;
+        }
+        100% {
+            height: 200px;
+            overflow: hidden;
+        }
+    }
+    @keyframes collapseoff {
+        from {
+            height: 200px;
+        }
+        to {
+            height: 50px;
+        }
+    }
+}
