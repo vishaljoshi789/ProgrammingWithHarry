@@ -81,6 +81,10 @@ a {
     .userloginarea {
         align-self: center;
     }
+    #collapsef {
+        height: 50px;
+        overflow: hidden;
+    }
     #collapseoff {
         height: 50px;
         animation: collapseoff 0.5s;
