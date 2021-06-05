@@ -78,8 +78,9 @@ a {
 
 .video {
     background-color: teal;
-    width: 60vw;
-    height: 70vh;
+    margin: 20px;
+    width: 65vw;
+    height: 40vw;
 }
 
 #videoplayer {
@@ -250,7 +251,18 @@ a {
     background-repeat: no-repeat;
 }
 
+@media screen and (min-width:1250px) {
+    .video {
+        width: 75vw;
+        height: 80vh;
+    }
+}
+
 @media screen and (max-width: 480px) {
+    .video {
+        width: 100vw;
+        height: 35vh;
+    }
     .fullpage {
         background-image: url(../img/homebgsmall.jpg);
         margin: -20px auto;
@@ -273,7 +285,8 @@ a {
 @media screen and (max-width: 800px) {
     .video {
         width: 100vw;
-        height: 35vh;
+        height: 55vw;
+        margin: -2px;
     }
     .forbigdevice {
         display: none;
