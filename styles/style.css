@@ -44,12 +44,12 @@ a {
     flex-wrap: wrap;
 }
 
-.video-heading {
+.card-heading {
     text-align: center;
 }
 
-.container-videos {
-    justify-content: center;
+.card {
+    justify-content: space-between;
     width: 30%;
     padding: 20px;
     background-color: rgba(0, 128, 128, 0.212);
@@ -59,11 +59,12 @@ a {
     border-radius: 10px;
 }
 
-.container-videos:hover {
+.card:hover {
     background-color: rgba(71, 71, 94, 0.048);
 }
 
-.startwatchingbutton {
+.card-button {
+    font-size: 18px;
     color: white;
     background-color: teal;
     padding: 10px;
@@ -71,22 +72,31 @@ a {
     border-radius: 10px;
 }
 
-.maincontent {
+.card-button:hover {
+    background-color: cadetblue;
+}
+
+.video {
     background-color: teal;
+    width: 60vw;
+    height: 70vh;
 }
 
 #videoplayer {
-    margin: 50px;
+    height: 100%;
+    width: 100%;
 }
 
-.about-video {
-    margin: 10px;
+.about-card {
+    margin: 20px;
     font-size: large;
     text-align: center;
 }
 
-.video-thumb {
+.card-img {
     border-radius: 50%;
+    width: 100%;
+    height: 100%;
 }
 
 .d-grid {
@@ -131,22 +141,34 @@ a {
     padding: 30px;
 }
 
-.videocontainer {
+.videohomeheader {
+    padding-bottom: 400px;
+}
+
+.container {
     font-family: 'Open Sans', sans-serif;
     color: rgb(69, 70, 75);
-    background-color: rgba(235, 226, 215, 0.116);
+    background-color: rgba(124, 221, 208, 0.199);
     padding: 30px;
 }
 
+.videohome {
+    background-image: url(../img/gotoblogimg.jpg);
+    background-size: 100% 100%;
+}
+
 .brandheading {
-    margin: 15px;
+    margin: auto;
     background-color: rgba(0, 0, 0, 0.226);
-    border-radius: 50px;
+    border-radius: 20px;
     text-align: center;
+    padding: 5px 10px;
 }
 
 .homecontainer-p {
-    margin: 50px;
+    margin: 50px auto;
+    background-color: rgba(56, 59, 59, 0.473);
+    border-radius: 20px;
 }
 
 .forsmalldevice {
@@ -235,21 +257,26 @@ a {
         background-size: 100% 100%;
         background-repeat: no-repeat;
     }
+    .videohome {
+        background-image: url(../img/videopagebg2.jpg);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
 }
 
 @media screen and (max-width :1050px) {
-    .container-videos {
+    .card {
         width: 70vw;
     }
 }
 
 @media screen and (max-width: 800px) {
+    .video {
+        width: 100vw;
+        height: 35vh;
+    }
     .forbigdevice {
         display: none;
-    }
-    #videoplayer {
-        height: auto;
-        width: auto;
     }
     .brandimg {
         height: 10vh;

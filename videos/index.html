@@ -12,91 +12,98 @@
 </head>
 
 <body>
+    <div class="videohome">
+        <br>
+        <!-- navigationbar -->
+        <Header class="videohomeheader">
+            <nav id="collapsef">
+                <div class="navitems d-flex" style="justify-content: space-between;">
 
-    <br>
-    <!-- navigationbar -->
-    <Header>
-        <nav id="collapsef">
-            <div class="navitems d-flex" style="justify-content: space-between;">
+                    <div class="leftcontent d-flex">
+                        <img class=" brandlogo " src="https://yt3.ggpht.com/ytc/AAUvwnjo8_vj99CKoTE5DcYrrS6GtsMzZKa5V2fzIuiu=s176-c-k-c0x00ffffff-no-rj-mo " alt=" ">
 
-                <div class="leftcontent d-flex">
-                    <img class=" brandlogo " src="https://yt3.ggpht.com/ytc/AAUvwnjo8_vj99CKoTE5DcYrrS6GtsMzZKa5V2fzIuiu=s176-c-k-c0x00ffffff-no-rj-mo " alt=" ">
+                        <ul class="d-flex navlinks">
+                            <a class=" mx-5 hoverbtn p-5 nav_a" href="../index.html">Home</a>
+                            <a class=" mx-5 hoverbtn p-5 nav_a" href="#">Videos</a>
+                            <a class=" mx-5 hoverbtn p-5 nav_a" href="">Blog</a>
+                            <a class=" mx-5 hoverbtn p-5 nav_a" href="">Contact Me</a>
 
-                    <ul class="d-flex navlinks">
-                        <a class=" mx-5 hoverbtn p-5 nav_a" href="../index.html">Home</a>
-                        <a class=" mx-5 hoverbtn p-5 nav_a" href="#">Videos</a>
-                        <a class=" mx-5 hoverbtn p-5 nav_a" href="">Blog</a>
-                        <a class=" mx-5 hoverbtn p-5 nav_a" href="">Contact Me</a>
+                        </ul>
+                        <button class=" collapsebtn" onclick="collapsebtnclicked()"><img src="../img/collapse.svg"
+                                alt=""></button>
 
-                    </ul>
-                    <button class=" collapsebtn" onclick="collapsebtnclicked()"><img src="../img/collapse.svg"
-                            alt=""></button>
-
-                </div>
-                <!-- these spaces are for mobile devices -->
-                <br class="forsmalldevice">
-                <br class="forsmalldevice">
-                <br class="forsmalldevice">
-                <br class="forsmalldevice">
-                <br class="forsmalldevice">
-                <br class="forsmalldevice">
-                <br class="forsmalldevice">
-                <br class="forsmalldevice">
-                <br class="forsmalldevice">
-                <br class="forsmalldevice">
-                <div class=" rightcontent d-flex">
-
-                    <div class="search" style="align-self: center;">
-                        <input class='searchinput' type=" text " placeholder=" Search ">
-                        <button class='btn'>Search</button>
                     </div>
+                    <!-- these spaces are for mobile devices -->
+                    <br class="forsmalldevice">
+                    <br class="forsmalldevice">
+                    <br class="forsmalldevice">
+                    <br class="forsmalldevice">
+                    <br class="forsmalldevice">
+                    <br class="forsmalldevice">
+                    <br class="forsmalldevice">
+                    <br class="forsmalldevice">
+                    <br class="forsmalldevice">
+                    <br class="forsmalldevice">
+                    <div class=" rightcontent d-flex">
 
-                    <div class="userloginarea d-flex  ">
-                        <button class="login btn">Login</button>
-                        <button class="signup btn  mx-5">Signup</button>
+                        <div class="search" style="align-self: center;">
+                            <input class='searchinput' type=" text " placeholder=" Search ">
+                            <button class='btn'>Search</button>
+                        </div>
+
+                        <div class="userloginarea d-flex  ">
+                            <button class="login btn">Login</button>
+                            <button class="signup btn  mx-5">Signup</button>
+                        </div>
+
                     </div>
-
                 </div>
-            </div>
 
 
-        </nav>
+            </nav>
+
+    </div>
+
     </Header>
 
+
+
+
     <main>
-        <div class="videocontainer d-flex" style="justify-content: center;">
-            <div class="container-videos d-flex">
+
+        <div class="container d-flex" style="justify-content: center;">
+            <div class="card d-flex">
                 <div>
-                    <img class="video-thumb" src="../img/pythonlogo.png" alt="">
+                    <img class="card-img" src="../img/pythonlogo.png" alt="">
                 </div>
-                <div class="video-heading">
+                <div class="card-heading">
                     <h1>Python Tutorials For Beginners In English</h1>
                 </div>
-                <div class="about-video">Python Tutorials For Beginners In English</div>
+                <div class="about-card">Python Tutorials For Beginners In English</div>
                 <a href="python-absolute-beginner/python-tutorial-for-absoute-beginner-1.html"><button
-                        class="startwatchingbutton">Start Watching</button></a>
+                        class="card-button">Start Watching</button></a>
 
             </div>
-            <div class="container-videos d-flex">
+            <div class="card d-flex">
                 <div>
-                    <img class="video-thumb" src="../img/djangologo.png" alt="">
+                    <img class="card-img" src="../img/djangologo.png" alt="">
                 </div>
-                <div class="video-heading">
+                <div class="card-heading">
                     <h1>Python Django Tutorials In English</h1>
                 </div>
-                <div class="about-video">Python Django Tutorials In English</div>
-                <a href=""><button class="startwatchingbutton">Start Watching</button></a>
+                <div class="about-card">Python Django Tutorials In English</div>
+                <a href=""><button class="card-button">Start Watching</button></a>
 
             </div>
-            <div class="container-videos d-flex">
+            <div class="card d-flex">
                 <div>
-                    <img class="video-thumb" src="../img/onevideologo.png" alt="">
+                    <img class="card-img" src="../img/onevideologo.png" alt="">
                 </div>
-                <div class="video-heading">
+                <div class="card-heading">
                     <h1>Learn in one video</h1>
                 </div>
-                <div class="about-video">Learn given topic just in one video</div>
-                <a href=""><button class="startwatchingbutton">Start Watching</button></a>
+                <div class="about-card">Learn given topic just in one video</div>
+                <a href=""><button class="card-button">Start Watching</button></a>
 
             </div>
 
@@ -106,8 +113,9 @@
 
 
 
-        </div>
+
     </main>
+
 
     <script src="../js/app.js"></script>
 
