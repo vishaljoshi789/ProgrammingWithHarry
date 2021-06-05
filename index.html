@@ -12,50 +12,73 @@
 </head>
 
 <body>
-    <Header>
-        <nav id="collapsef">
-            <div class="navitems d-flex" style="justify-content: space-between;">
+    <div class="fullpage">
+        <br>
+        <!-- navigationbar -->
+        <Header>
+            <nav id="collapsef">
+                <div class="navitems d-flex" style="justify-content: space-between;">
 
-                <div class="leftcontent d-flex" style="align-items: center;">
-                    <img class=" brandlogo " src="https://yt3.ggpht.com/ytc/AAUvwnjo8_vj99CKoTE5DcYrrS6GtsMzZKa5V2fzIuiu=s176-c-k-c0x00ffffff-no-rj-mo " alt=" ">
+                    <div class="leftcontent d-flex">
+                        <img class=" brandlogo " src="https://yt3.ggpht.com/ytc/AAUvwnjo8_vj99CKoTE5DcYrrS6GtsMzZKa5V2fzIuiu=s176-c-k-c0x00ffffff-no-rj-mo " alt=" ">
 
-                    <ul class="d-flex navlinks">
-                        <a class=" mx-5 " href="index.html">Home</a>
-                        <a class=" mx-5 " href="">Videos</a>
-                        <a class=" mx-5 " href="">Blog</a>
-                        <a class=" mx-5 " href="">Contact Me</a>
+                        <ul class="d-flex navlinks">
+                            <a class=" mx-5 hoverbtn p-5 nav_a" href="index.html">Home</a>
+                            <a class=" mx-5 hoverbtn p-5 nav_a" href="videos">Videos</a>
+                            <a class=" mx-5 hoverbtn p-5 nav_a" href="">Blog</a>
+                            <a class=" mx-5 hoverbtn p-5 nav_a" href="">Contact Me</a>
 
-                    </ul>
-                    <br>
-                    <hr class="forsmalldevice divider">
+                        </ul>
+                        <button class=" collapsebtn" onclick="collapsebtnclicked()"><img src="img/collapse.svg"
+                                alt=""></button>
 
-                    <button class="forsmalldevice collapsebtn" onclick="collapsebtnclicked()"><img
-                            src="img/collapse.svg" alt=""></button>
-                </div>
-                <div class=" rightcontent d-flex ">
-                    <div class="search" style="align-self: center;">
-                        <input class='searchinput' type=" text " placeholder=" Search ">
-                        <button class='btn'>Search</button>
                     </div>
+                    <!-- these spaces are for mobile devices -->
+                    <br class="forsmalldevice">
+                    <br class="forsmalldevice">
+                    <br class="forsmalldevice">
+                    <br class="forsmalldevice">
+                    <br class="forsmalldevice">
+                    <br class="forsmalldevice">
+                    <br class="forsmalldevice">
+                    <br class="forsmalldevice">
+                    <br class="forsmalldevice">
+                    <br class="forsmalldevice">
+                    <div class=" rightcontent d-flex">
 
-                    <div class="userloginarea d-flex  ">
-                        <button class="login btn">Login</button>
-                        <button class="signup btn  mx-5">Signup</button>
+                        <div class="search" style="align-self: center;">
+                            <input class='searchinput' type=" text " placeholder=" Search ">
+                            <button class='btn'>Search</button>
+                        </div>
+
+                        <div class="userloginarea d-flex  ">
+                            <button class="login btn">Login</button>
+                            <button class="signup btn  mx-5">Signup</button>
+                        </div>
+
                     </div>
-
                 </div>
-            </div>
 
 
-        </nav>
-    </Header>
+            </nav>
+        </Header>
 
 
-    <main>
-        <div class="homecontainer d-flex">
+
+        <!-- container to interoduce yourself -->
+        <div class="homecontainer">
+            <span id="onlineindicator"></span>
             <img class=" brandimg " src="https://yt3.ggpht.com/ytc/AAUvwnjo8_vj99CKoTE5DcYrrS6GtsMzZKa5V2fzIuiu=s176-c-k-c0x00ffffff-no-rj-mo " alt=" ">
+            <h1 class="brandheading">Welcome to ProgrammingWithHarry</h1>
+            <p class="homecontainer-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat facilis corrupti nam quia officia mollitia quaerat pariatur dignissimos illo sint eos, vel illum necessitatibus, laboriosam dolore in natus nulla impedit ducimus. Pariatur animi
+                facilis praesentium, ipsa cum quaerat iure.
+            </p>
+
         </div>
-    </main>
+    </div>
+    <br>
+    <hr>
+
 
     <script src="js/app.js"></script>
 
