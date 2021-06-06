@@ -204,7 +204,7 @@ a {
 }
 
 #collapseon {
-    animation: collapseon 0.5s ease-out;
+    animation: collapseon 0.5s;
 }
 
 @keyframes collapseon {

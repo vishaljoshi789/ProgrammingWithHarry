@@ -53,8 +53,8 @@ let vlist = {
         "Understanding the Django Admin Interface | Django Tutorial #11": { 'thumb': 'https://i.ytimg.com/vi/iC7rc7LQFRc/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAVh-2neGE21xVHWD7ij1s31JOsmQ', "videoid": "iC7rc7LQFRc" },
         "Customizing the Django Admin Interface | Django Tutorial #12": { 'thumb': 'https://i.ytimg.com/vi/nIMYRqwFpVM/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBF8Srxy7ogq-t5zDdFTZBbd1bs8w', "videoid": "nIMYRqwFpVM" },
         "Using Static Files & StaticFiles Dirs in Django | Django Tutorial #13": { 'thumb': 'https://i.ytimg.com/vi/G-kdYhufgDo/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLB0oombgS-JTmZY00rIV-cigapkPw', "videoid": "G-kdYhufgDo" },
-        "Template Inheritance in Django | Django Tutorial #14": { 'thumb': 'https://i.ytimg.com/vi/gw-hKVt71A8/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBM0ZN4dQsThfrdzbG85LqBCxl9zw', "videoid": "m53EEP5H6Sg" },
-        "Project 2: ToDos List App in Django | Django Tutorial #15": { 'thumb': 'https://i.ytimg.com/vi/bMNdcMSe3pc/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLB_70_aHbZclybbawXkkGixiyFJxw', "videoid": "gw-hKVt71A8" },
+        "Template Inheritance in Django | Django Tutorial #14": { 'thumb': 'https://i.ytimg.com/vi/gw-hKVt71A8/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBM0ZN4dQsThfrdzbG85LqBCxl9zw', "videoid": "gw-hKVt71A8" },
+        "Project 2: ToDos List App in Django | Django Tutorial #15": { 'thumb': 'https://i.ytimg.com/vi/bMNdcMSe3pc/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLB_70_aHbZclybbawXkkGixiyFJxw', "videoid": "bMNdcMSe3pc" },
         "Project 2: Creating Models & Superuser for Our ToDos List Django App | Django Tutorial #16": { 'thumb': 'https://i.ytimg.com/vi/CuKsIVwZPXw/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCOXd_KHCIGDK-Jvoc6McoeGyEOBQ', "videoid": "CuKsIVwZPXw" },
         "Project 2: Using Django Template Language in our ToDos List Django App | Django Tutorial #17": { 'thumb': 'https://i.ytimg.com/vi/DR0Kbx1N1TU/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCds7o_vCUQUG-Ip0kJqAON3bG5cA', "videoid": "DR0Kbx1N1TU" },
         "Project 2: Fetching Data from our Models for ToDos List Django App | Django Tutorial #18": { 'thumb': 'https://i.ytimg.com/vi/KaJBkELJ5n0/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLD_euINWEewnZYhDh_6AK_paKZJEw', "videoid": "KaJBkELJ5n0" },
@@ -87,14 +87,23 @@ let vlist = {
 
 }
 
+localStorage.setItem("videoid", "null");
+localStorage.setItem("videotitle", "null");
+
+
 getvideofun = (videoid, key) => {
-    localStorage.removeItem("videoid")
+
     localStorage.removeItem("videotitle")
-    localStorage.setItem("videoid", videoid)
+    localStorage.removeItem("videoid")
     localStorage.setItem("videotitle", key)
+    localStorage.setItem("videoid", videoid)
+
 }
+
+
+// add your new categories here
 categoryfun = (category) => {
-    localStorage.clear()
+    localStorage.removeItem(localStorage.key(1))
     if (category === 'python') {
 
         localStorage.setItem('Python Tutorials For Beginners In English', JSON.stringify(vlist['python absolute beginner']))
@@ -106,11 +115,19 @@ categoryfun = (category) => {
 
     }
 
+
+
 }
 
-videos = JSON.parse(localStorage.getItem(localStorage.key(0)))
+
+
+videos = JSON.parse(localStorage.getItem(localStorage.key(1)))
+document.getElementById('topic').innerText = localStorage.key(1)
+
 let videolist = document.getElementById("video-list");
 for (video in videos) {
+
+    // document.getElementById('topic').innerText = localStorage.key(0)
     videolist.innerHTML += `<div class="card d-flex">
     <div>
     <img class="card-img" style="width:100%;height:100%;border-radius: 0px;" src="${videos[video]['thumb']}" alt="">
@@ -118,6 +135,8 @@ for (video in videos) {
     <div class="card-heading" style="margin:10px;">
     <h4>${video}</h4>
     </div>
-    <a  href="video.html"id="watchbtn" ><button
-        class="card-button" onclick="getvideofun('${(videos[video])['videoid']}','${video}')">Watch</button></a>`
+    <a  href="video.html" id="watchbtn" ><button
+        class="card-button" onclick="getvideofun('${videos[video]['videoid']}','${video}')">Watch</button></a>`
+
+
 }
