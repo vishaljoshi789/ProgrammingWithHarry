@@ -78,9 +78,9 @@ a {
 
 .video {
     background-color: teal;
-    margin: 20px;
-    width: 65vw;
-    height: 40vw;
+    margin: 20px auto;
+    width: 90vw;
+    height: 60vh;
 }
 
 #videoplayer {
