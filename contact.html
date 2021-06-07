@@ -5,17 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me - ProgrammingWithHarry</title>
     <link rel="stylesheet" href="styles/style.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
-    <title>Home - ProgrammingWithHarry</title>
 </head>
 
 <body>
-    <div class="fullpage">
+    <div class="contacthome">
         <br>
         <!-- navigationbar -->
-        <Header>
+        <Header class="homeheader">
             <nav id="collapsef">
                 <div class="navitems d-flex" style="justify-content: space-between;">
 
@@ -29,7 +27,7 @@
                             <a class=" mx-5 hoverbtn p-5 nav_a" href="contact.html">Contact Me</a>
 
                         </ul>
-                        <button class=" collapsebtn" onclick="collapsebtnclicked()"><img src="img/collapse.svg"
+                        <button class=" collapsebtn" onclick="collapsebtnclicked()"><img src="../img/collapse.svg"
                                 alt=""></button>
 
                     </div>
@@ -61,57 +59,39 @@
 
 
             </nav>
+            <!-- title of page located down of navigation bar -->
+            <h1 style="display:block;width: fit-content;padding: 10px 50px; margin:0px auto;text-align: center;border-radius: 30px; position: relative; top: 150px;font-family: 'Open Sans', sans-serif;color: rgb(206, 214, 236);background-color: rgba(26, 26, 26, 0.233);">
+                Contact Me
+
+            </h1>
+            <h4 style="display:block;width: fit-content;padding: 10px 50px; margin:30px auto;text-align:
+                center;border-radius: 30px; position: relative; top: 150px;font-family: 'Open Sans' , sans-serif;color:
+                rgb(126, 181, 189);background-color: rgba(252, 252, 252, 0.233);">How Can I Help?</h4>
+
+
+
         </Header>
-
-
-
-        <!-- container to interoduce yourself -->
-        <div class="homecontainer">
-            <span id="onlineindicator"></span>
-            <img class=" brandimg " src="https://yt3.ggpht.com/ytc/AAUvwnjo8_vj99CKoTE5DcYrrS6GtsMzZKa5V2fzIuiu=s176-c-k-c0x00ffffff-no-rj-mo " alt=" ">
-            <h1 class="brandheading">Welcome to ProgrammingWithHarry</h1>
-            <p class="homecontainer-p" style="text-align: center; padding: 10px;">Confused on which course to take? I have got you covered. Browse courses and find out the best course for you. Its free! Programming With Harry is my attempt to teach basics and those coding techniques to people in short time which took me
-                ages to learn
-            </p>
-
-        </div>
     </div>
-    <br>
-    <!-- container to browse the website -->
 
     <div class="container d-flex" style="justify-content: center;">
-        <div class="card d-flex">
-            <div>
-                <img class="card-img" src="img/browsevideologo.jpg" alt="" style="border-radius: 0px;">
+        <div class="contactform d-flex" style="border-radius:10px;background-color:rgba(101, 101, 172, 0.445);flex-direction: column; align-items: space-between; width:70vw">
+            <div class="name d-flex" style="flex-direction: column;;margin:20px;">
+                <span>FULL NAME <b>:</b> </span>
+                <input type="text" style="display:inline; margin:10px; width: auto;border-radius: 5px;height:30px;">
             </div>
-            <div class="card-heading">
-                <h1>Free Video Courses</h1>
+            <div class="email d-flex" style="flex-direction: column;margin:20px;">
+                <span>EMAIL <b>:</b></span>
+                <input type="email" style="display:inline;border-radius: 5px;height:30px; margin:10px">
             </div>
-            <div class="about-card">Get your programming career started with these free video courses. Source code is available with all the videos for amazing learning experience</div>
-            <a href="videos/index.html"><button class="card-button">Browse Video Courses</button></a>
-
-        </div>
-        <div class="card d-flex">
-            <div>
-                <img class="card-img" src="img/gotoblogimg.jpg" alt="" style="border-radius: 0px;">
+            <div class="ph-no d-flex" style="flex-direction: column;margin:20px;;">
+                <span>PHONE NUMBER <b>:</b></span>
+                <input type="tel" style="display:inline;border-radius: 5px;height:30px; margin:10px">
             </div>
-            <div class="card-heading">
-                <h1>Coding Articles</h1>
+            <div class="name d-flex" style="flex-direction: column;margin:20px;">
+                <span>MESSAGE <b>:</b></span>
+                <textarea style="margin: 10px;resize: vertical;height:60px;border-radius: 5px;" name="message" id="contactmessage"></textarea>
             </div>
-            <div class="about-card">Some of the latest coding information compiled in the form of coding articles. Keep your programming knowledge up to date with these articles.</div>
-            <a href="blog/blog.html"><button class="card-button">Go to Blog</button></a>
-
-        </div>
-        <div class="card d-flex">
-            <div>
-                <img class="card-img" src="img/contactmelogo.jpg" alt="" style="border-radius: 0px;">
-            </div>
-            <div class="card-heading">
-                <h1>Contact Me</h1>
-            </div>
-            <div class="about-card">Learn programming from these free courses. Examples are available with these tutorials. You can contact me for any doubt and I will get back to you!</div>
-            <a href="contact.html"><button class="card-button">Contact Me</button></a>
-
+            <div class="d-flex" style="justify-content: center;"><button onclick="contactsubmitbtnclicked()" class="contactsubmitbtn">Submit</button></div>
         </div>
     </div>
     <footer class="d-flex" style="align-items: center;height:50px;background:rgb(80, 80, 80);color:rgb(245, 242, 237);font-family: 'Open Sans', sans-serif;">
@@ -119,10 +99,7 @@
             Copyright © 2021-2022 ProgrammingWithHarry
         </div>
     </footer>
-
-
     <script src="js/app.js"></script>
-
 </body>
 
 </html>

@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="styles/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
-    <title>Videos - ProgrammingWithHarry</title>
+    <title>Sign in - ProgrammingWithHarry</title>
 </head>
 
 <body>
-    <div class="videohome">
+    <div class="signinhome">
         <br>
         <!-- navigationbar -->
         <Header class="homeheader">
@@ -23,10 +23,10 @@
                         <img class=" brandlogo " src="https://yt3.ggpht.com/ytc/AAUvwnjo8_vj99CKoTE5DcYrrS6GtsMzZKa5V2fzIuiu=s176-c-k-c0x00ffffff-no-rj-mo " alt=" ">
 
                         <ul class="d-flex navlinks">
-                            <a class=" mx-5 hoverbtn p-5 nav_a" href="../index.html">Home</a>
-                            <a class=" mx-5 hoverbtn p-5 nav_a" href="index.html">Videos</a>
-                            <a class=" mx-5 hoverbtn p-5 nav_a" href="../blog/blog.html">Blog</a>
-                            <a class=" mx-5 hoverbtn p-5 nav_a" href="../contact.html">Contact Me</a>
+                            <a class=" mx-5 hoverbtn p-5 nav_a" href="index.html">Home</a>
+                            <a class=" mx-5 hoverbtn p-5 nav_a" href="videos/index.html">Videos</a>
+                            <a class=" mx-5 hoverbtn p-5 nav_a" href="blog/blog.html">Blog</a>
+                            <a class=" mx-5 hoverbtn p-5 nav_a" href="contact.html">Contact Me</a>
 
                         </ul>
                         <button class=" collapsebtn" onclick="collapsebtnclicked()"><img src="../img/collapse.svg"
@@ -45,8 +45,6 @@
                     <br class="forsmalldevice">
                     <br class="forsmalldevice">
 
-
-
                     <div class=" rightcontent d-flex">
 
                         <div class="search" style="align-self: center;">
@@ -55,8 +53,8 @@
                         </div>
 
                         <div class="userloginarea d-flex  ">
-                            <a href="../signin.html"><button class="login btn mx-5">Login</button></a>
-                            <a href="../signup.html"><button class="signup btn  mx-5">Signup</button></a>
+                            <a href="signin.html"><button class="login btn mx-5">Login</button></a>
+                            <a href="signup.html"><button class="signup btn  mx-5">Signup</button></a>
                         </div>
 
                     </div>
@@ -65,8 +63,8 @@
 
             </nav>
             <!-- title of page located down of navigation bar -->
-            <h1 style="display:block;width: fit-content;padding: 10px 50px; margin:0px auto;text-align: center;border-radius: 30px; position: relative; top: 150px;font-family: 'Open Sans', sans-serif;color: rgb(206, 214, 236);background-color: rgba(235, 226, 215, 0.116);">
-                Videos
+            <h1 style="display:block;width: fit-content;padding: 10px 50px; margin:0px auto;text-align: center;border-radius: 30px; position: relative; top: 150px;font-family: 'Open Sans', sans-serif;color: rgb(206, 214, 236);background-color: rgba(0, 0, 0, 0.616);">
+                Welcome Back
 
             </h1>
 
@@ -75,57 +73,22 @@
         </Header>
     </div>
 
-
-
-
     <main>
-
         <div class="container d-flex" style="justify-content: center;">
-            <div class="card d-flex">
-                <div>
-                    <img class="card-img" src="../img/pythonlogo.png" alt="">
+            <div class="contactform d-flex" style="border-radius:10px;background-color:rgba(101, 101, 172, 0.445);flex-direction: column; align-items: space-between; width:70vw">
+                <div class="email d-flex" style="flex-direction: column;margin:20px;">
+                    <span>EMAIL <b>:</b></span>
+                    <input type="email" style="display:inline;border-radius: 5px;height:30px; margin:10px">
                 </div>
-                <div class="card-heading">
-                    <h1>Python Tutorials For Beginners In English</h1>
+                <div class="ph-no d-flex" style="flex-direction: column;margin:20px;;">
+                    <span>PASSWORD<b>:</b></span>
+                    <input type="password" style="display:inline;border-radius: 5px;height:30px; margin:10px">
                 </div>
-                <div class="about-card">Python Tutorials For Beginners In English</div>
-                <a href="video/video-list.html"><button onclick="categoryfun('python')" class="card-button">Start
-                        Watching</button></a>
-
+                <div class="d-flex" style="justify-content: center;"><button onclick="contactsubmitbtnclicked()" class="contactsubmitbtn">Login</button></div>
             </div>
-            <div class="card d-flex">
-                <div>
-                    <img class="card-img" src="../img/djangologo.png" alt="">
-                </div>
-                <div class="card-heading">
-                    <h1>Python Django Tutorials In English</h1>
-                </div>
-                <div class="about-card">Python Django Tutorials In English</div>
-                <a href="video/video-list.html"><button onclick="categoryfun('python-django')" class="card-button">Start
-                        Watching</button></a>
-
-            </div>
-            <div class="card d-flex">
-                <div>
-                    <img class="card-img" src="../img/onevideologo.png" alt="">
-                </div>
-                <div class="card-heading">
-                    <h1>Learn in one video</h1>
-                </div>
-                <div class="about-card">Learn given topic just in one video</div>
-                <a href="video/video-list.html"><button onclick="categoryfun('learnInOne')" class="card-button">Start
-                        Watching</button></a>
-
-            </div>
-
-
         </div>
-
-
-
-
-
     </main>
+
     <footer class="d-flex" style="align-items: center;height:50px;background:rgb(80, 80, 80);color:rgb(245, 242, 237);font-family: 'Open Sans', sans-serif;">
         <div class="footer" style="width: 100vw; text-align: center;">
             Copyright © 2021-2022 ProgrammingWithHarry
@@ -133,8 +96,7 @@
     </footer>
 
 
-    <script src="../js/videolist.js"></script>
-    <script src="../js/app.js"></script>
+    <script src="js/app.js"></script>
 
 </body>
 

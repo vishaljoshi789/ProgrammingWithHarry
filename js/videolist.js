@@ -1,3 +1,5 @@
+// here is the list of youtube videos by their {"catagory" : {'title of video'{'thumb':'link for thumbnail of video','videoid':'id of your youtube video'}}}
+// NOTE : after adding new category here, also upgrade categoryfun()
 let vlist = {
     // python videos
     "python absolute beginner": {
@@ -87,10 +89,8 @@ let vlist = {
 
 }
 
-localStorage.setItem("videoid", "null");
-localStorage.setItem("videotitle", "null");
 
-
+// function to set value of videoid and videotitle on localstorage when the watch button is clicked
 getvideofun = (videoid, key) => {
 
     localStorage.removeItem("videotitle")
@@ -101,33 +101,45 @@ getvideofun = (videoid, key) => {
 }
 
 
-// add your new categories here
+// function to select the category of your video 
 categoryfun = (category) => {
-    localStorage.removeItem(localStorage.key(1))
-    if (category === 'python') {
+    localStorage.clear()
+        // program to initialize value of videoid and videotitle to localStorage
+    localStorage.setItem("videoid", "null");
+    localStorage.setItem("videotitle", "null");
 
-        localStorage.setItem('Python Tutorials For Beginners In English', JSON.stringify(vlist['python absolute beginner']))
+
+    if (category === 'python') {
+        localStorage.setItem('1', JSON.stringify({ 'Python Tutorials For Beginners In English': JSON.stringify(vlist['python absolute beginner']) }))
+
+
     } else if (category === 'python-django') {
-        localStorage.setItem('Python Django Tutorials In English', JSON.stringify(vlist["django tutorial for absolute beginner"]))
+        localStorage.setItem('1', JSON.stringify({ 'Python Django Tutorials In English': JSON.stringify(vlist["django tutorial for absolute beginner"]) }))
 
     } else if (category === 'learnInOne') {
-        localStorage.setItem('Learn in one video', JSON.stringify(vlist["learnInOne"]))
+        localStorage.setItem('1', JSON.stringify({ 'Learn in one video': JSON.stringify(vlist["learnInOne"]) }))
+
 
     }
+
+
+
+
 
 
 
 }
 
 
-
-videos = JSON.parse(localStorage.getItem(localStorage.key(1)))
-document.getElementById('topic').innerText = localStorage.key(1)
-
+// assigning all video of the category to videos variable
+category = JSON.parse(localStorage.getItem('1'))
+videos = JSON.parse(category[Object.keys(category)[0]])
+    // updating inner text of topic to the topic of video category like (Python Tutorial For Absolute Beginner, django tutorial , learn in one video )
+document.getElementById('topic').innerText = Object.keys(category)[0]
 let videolist = document.getElementById("video-list");
-for (video in videos) {
 
-    // document.getElementById('topic').innerText = localStorage.key(0)
+// program to get all video of that category and display it in id= video-list 
+for (video in videos) {
     videolist.innerHTML += `<div class="card d-flex">
     <div>
     <img class="card-img" style="width:100%;height:100%;border-radius: 0px;" src="${videos[video]['thumb']}" alt="">
@@ -137,6 +149,4 @@ for (video in videos) {
     </div>
     <a  href="video.html" id="watchbtn" ><button
         class="card-button" onclick="getvideofun('${videos[video]['videoid']}','${video}')">Watch</button></a>`
-
-
 }

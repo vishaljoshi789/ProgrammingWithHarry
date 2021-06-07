@@ -5,14 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Python Tutorials</title>
+    <title>Videos</title>
     <link rel="stylesheet" href="../../styles/style.css">
 </head>
 
 <body>
-    <Header style="background-color: lightslategray;">
-        <br>
 
+    <Header style="background :linear-gradient(to bottom , rgb(71, 232, 253), white)">
+        <br>
+        <!-- navigation bar -->
         <nav id="collapsef">
             <div class="navitems d-flex" style="justify-content: space-between;">
 
@@ -22,14 +23,15 @@
                     <ul class="d-flex navlinks">
                         <a class=" mx-5 hoverbtn p-5 nav_a" href="../../index.html">Home</a>
                         <a class=" mx-5 hoverbtn p-5 nav_a" href="../index.html">Videos</a>
-                        <a class=" mx-5 hoverbtn p-5 nav_a" href="">Blog</a>
-                        <a class=" mx-5 hoverbtn p-5 nav_a" href="">Contact Me</a>
+                        <a class=" mx-5 hoverbtn p-5 nav_a" href="../../blog/blog.html">Blog</a>
+                        <a class=" mx-5 hoverbtn p-5 nav_a" href="../../contact.html">Contact Me</a>
 
                     </ul>
                     <button class=" collapsebtn" onclick="collapsebtnclicked()"><img src="../../img/collapse.svg"
                             alt=""></button>
 
                 </div>
+                <!-- spaces for small devices  -->
                 <br class="forsmalldevice">
                 <br class="forsmalldevice">
                 <br class="forsmalldevice">
@@ -40,8 +42,7 @@
                 <br class="forsmalldevice">
                 <br class="forsmalldevice">
                 <br class="forsmalldevice">
-                <br class="forsmalldevice">
-                <br class="forsmalldevice">
+
 
                 <div class=" rightcontent d-flex">
 
@@ -51,8 +52,8 @@
                     </div>
 
                     <div class="userloginarea d-flex  ">
-                        <button class="login btn">Login</button>
-                        <button class="signup btn  mx-5">Signup</button>
+                        <a href="../../signin.html"><button class="login btn mx-5">Login</button></a>
+                        <a href="../../signup.html"><button class="signup btn  mx-5">Signup</button></a>
                     </div>
 
                 </div>
@@ -60,7 +61,7 @@
 
 
         </nav>
-        <h1 id="videotitle" onclick="" style="margin:10px;display:block;width: fit-content;padding: 10px 50px; margin:0px auto;text-align: center;border-radius: 30px;font-family: 'Open Sans', sans-serif;color: rgb(206, 214, 236);background-color: rgba(235, 226, 215, 0.116);">
+        <h1 id="videotitle" onclick="" style="margin:10px;display:block;width: fit-content;padding: 10px 50px; margin:0px auto;text-align: center;border-radius: 30px;font-family: 'Open Sans', sans-serif;color: rgb(128, 130, 136);background-color: rgba(235, 226, 215, 0.116);">
 
 
         </h1>
@@ -72,22 +73,38 @@
         <div class="video">
             <div id="videoplayer"></div>
 
-            <div class="d-flex" style="justify-content: space-between; width: 50vw;margin: 20px auto;">
+            <div class="d-flex" style="justify-content: space-between; width: 50vw;margin:20px auto;">
                 <button class="btn" id="previousbtn" onclick="previousbtnclicked()"><img
                         src="../../img/previousbutton.svg" alt=""></button>
                 <button class="btn" id="nextbtn" onclick="nextbtnclicked()"><img src="../../img/nextbutton.svg"
                         alt=""></button>
             </div>
+            <div class="sourcecodebutton d-flex">
+                <a id="sourcecodelink" href="" style="margin:20px auto; "><button
+                        style="padding: 10px; width: fit-content;" onclick="go_to_source_code_btn_clicked()"
+                        class="btn">Go to Source
+                        Code</button></a>
+
+            </div>
+
         </div>
 
 
-    </main>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
 
+    </main>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <footer class="d-flex" style="align-items: center;height:50px;background:rgb(80, 80, 80);color:rgb(245, 242, 237);font-family: 'Open Sans', sans-serif;">
         <div class="footer" style="width: 100vw; text-align: center;">
             Copyright © 2021-2022 ProgrammingWithHarry
